@@ -1,10 +1,9 @@
-import React, { useState, useMemo } from 'react';
 import { Calculator, Clock, Calendar } from 'lucide-react';
 
 const VideoScopeEstimator = () => {
   const [finishedMinutes, setFinishedMinutes] = useState(40);
   const [editingLift, setEditingLift] = useState<'light' | 'medium' | 'heavy'>('medium');
-  const [finishingLift, setFinishingLift] = useState<'light' | 'medium' | 'heavy'>('medium');
+  const [finishingLift] = useState<'light' | 'medium' | 'heavy'>('medium');
   const [hoursPerDay, setHoursPerDay] = useState(5);
   const [bufferPercent, setBufferPercent] = useState(10);
 
