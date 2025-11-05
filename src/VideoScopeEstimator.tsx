@@ -41,14 +41,14 @@ const VideoScopeEstimator = () => {
     };
   }, [finishedMinutes, editingLift, finishingLift, hoursPerDay, bufferPercent]);
 
-  const getLiftColor = (lift) => {
-    const colors = {
-      light: 'bg-green-100 text-green-800 border-green-300',
-      medium: 'bg-yellow-100 text-yellow-800 border-yellow-300',
-      heavy: 'bg-red-100 text-red-800 border-red-300'
-    };
-    return colors[lift];
+  const getLiftColor = (lift: 'light' | 'medium' | 'heavy'): string => {
+    const colors: Record<'light' | 'medium' | 'heavy', string> = {
+    light: 'bg-green-100 text-green-800 border-green-300',
+    medium: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+    heavy: 'bg-red-100 text-red-800 border-red-300'
   };
+  return colors[lift];
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-8">
